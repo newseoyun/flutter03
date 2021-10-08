@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter03/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,6 +10,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  late TabController controller;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +26,14 @@ class _MyAppState extends State<MyApp> {
           child: Scaffold(
             body: TabBarView(
               physics: NeverScrollableScrollPhysics(),
+              children: [
+                Container(),
+                Container(),
+                Container(),
+                Container(),
+              ],
             ),
+            bottomNavigationBar: Bottom(),
           ),
         ));
   }

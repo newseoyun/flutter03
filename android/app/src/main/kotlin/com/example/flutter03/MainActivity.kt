@@ -1,4 +1,4 @@
-package com.example.flutter03
+package com.seoyun.flutter03
 
 import io.flutter.embedding.android.FlutterActivity
 
