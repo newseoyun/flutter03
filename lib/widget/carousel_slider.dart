@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter03/model/model_movie.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter03/screen/detail_screen.dart';
 
 class CarouselImage extends StatefulWidget {
   final List<Movie> movies;
@@ -88,8 +89,13 @@ class _CarouselImageState extends State<CarouselImage> {
               child: Column(
                 children: [
                   IconButton(
-                    onPressed: () {},
                     icon: const Icon(Icons.info),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute<Null>(
+                          fullscreenDialog: true,
+                          builder: (context) =>
+                              DetailScreen(movie: movies[_currentPage])));
+                    },
                   ),
                   const Text(
                     '정보',
