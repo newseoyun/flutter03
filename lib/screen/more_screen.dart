@@ -32,7 +32,7 @@ class MoreScreen extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.all(10),
-              child: Text('hihihihihihihi'),
+              child: Text('test'),
             ),
             Container(
               padding: EdgeInsets.all(10),
